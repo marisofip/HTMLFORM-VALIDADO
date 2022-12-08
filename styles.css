@@ -2,3 +2,12 @@ body {
   display: flex;
   justify-items: center;
 }
+
+
+.alert {
+  display: none;
+}
+
+alert-show {
+  display: block; ;
+}
