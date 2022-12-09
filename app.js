@@ -3,16 +3,39 @@ let forms= document.querySelector("#forms");
 forms.addEventListener('submit', (evento) => {
   evento.preventDefault();
   
+  haycampovacio = false;
+  divalert = document.getElementById("alert");
+    
+inputTarjeta = document.getElementById("inputTarjeta");
+campovacio(inputTarjeta);
+  inputCVC = document.getElementById("inputCVC");
+campovacio(inputCVC);
+  inputAmount = document.getElementById("inputAmount");
+campovacio(inputAmount);
+  inputNombre = document.getElementById("inputNombre");
+campovacio(inputNombre);
+  inputApellido = document.getElementById("inputApellido");
+campovacio(inputApellido);
+  inputCity = document.getElementById("inputCity");
+campovacio(inputCity);
+  inputZip = document.getElementById("inputZip");
+campovacio(inputZip);
+ inputState = document.getElementById("inputState");
+campovacio(inputState);
+   inputMensaje= document.getElementById("inputMensaje");
+campovacio(inputMensaje);
   
-  document.querySelector("#alert").classList.toggle("alert-show")
-document.querySelector("#alert").classList.toggle("alert")
+  haycampovacio ? divalert.classList.add("alert-show") : divalert.classList.remove("alert-show")
+
 })
 
 function campovacio (campo){
   if (campo.value == ""){
-    campo.style.backgroundColor = "red"
+    campo.style.backgroundColor = "#f8d7da"
+    haycampovacio = true;
   }else {
     campo.style.backgroundColor = "white"
+    haycampovacio = false;
   }
  
 }
