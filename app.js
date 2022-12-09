@@ -35,7 +35,12 @@ function campovacio (campo){
     haycampovacio = true;
   }else {
     campo.style.backgroundColor = "white"
-    haycampovacio = false;
+    if(haycampovacio){
+      haycampovacio = true
+    }else{
+      haycampovacio = false;
+    }
+     
   }
  
 }
